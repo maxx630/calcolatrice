@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+.container {
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background: #333;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.5), inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.calculator {
+    position: relative;
+    display: grid;
+}
+
+.calculator .value {
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: wheat;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+}
+
+.calculator span {
+    color: rgb(255, 255, 255);
+    position: relative;
+    place-items: center;
+    display: grid;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 120px;
+}
+.calculator span::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.5), inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+.calculator span:active{
+    filter: brightness(1.5);
+}
+.calculator .clear{
+background: red;
+width: 90%;
+font-size: 40px;
+grid-column: span 2;
+}
+.calculator .clear::before{
+    box-shadow: 25px 25px 75px rgba(219, 71, 71, 0.507), 10px 10px 70px rgba(255, 0, 0, 0.25), inset -5px -5px 15px rgba(255, 0, 0, 0.5), inset 5px 5px 15px rgba(255, 0, 0, 0.5);
+
+}
+.calculator .ecal{
+    background: rgb(89, 255, 12);
+    width: 90%;
+    grid-column: span 2;
+    font-size: 50px;
+    }
+    .calculator .ecal::before{
+        box-shadow: 25px 25px 75px rgba(89, 255, 12, 0.411), 10px 10px 70px rgba(72, 255, 0, 0.25), inset -5px -5px 15px rgba(51, 255, 0, 0.774), inset 5px 5px 15px rgba(30, 255, 0, 0.5);
+
+    }
